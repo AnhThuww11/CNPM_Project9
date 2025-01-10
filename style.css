@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('image/cover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 80px 40px 40px;
+    background: rgba(0, 1, 1, 0.7);
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.form::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.form img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    border-radius: 50%;
+}
+
+.form h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    color: cyan;
+}
+
+.form .input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form .input-group input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 30px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    border-bottom: 1px solid cyan;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: .9rem;
+    transition: .4s ease-out;
+    color: #fff;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 0.8rem;
+    color: cyan;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background: cyan;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.submit-btn:hover {
+    background: #00bcd4;
+}
+
+#forgot-pwd {
+    display: none;
+}
