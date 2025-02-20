@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h2>Đăng nhập</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Đăng nhập</button>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function() {
+        $('.link-login').click(function() {
+            $('#login').fadeIn();
+        });
+        $('.link-register').click(function() {
+            $('#register').fadeIn();
+        });
+        $('.close').click(function() {
+            $('.popup').fadeOut();
+        });
+    });
+</script>
+{% endblock %}
+
+{% block popup %}
+<div id="login" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Đăng nhập</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Đăng nhập</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+<!-- 					</div> -->
