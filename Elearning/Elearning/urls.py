@@ -2,7 +2,7 @@
 URL configuration for Elearning project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
+        
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from django.http import HttpResponse
 urlpatterns = [
-    path('', lambda request: HttpResponse('Welcome to the Homepage!')),
     path('', include('courses.urls')),
+    path('', include('home.urls')),
     path('admin/', admin.site.urls),
+    
+    
 ]
